@@ -85,8 +85,8 @@ func (trie *RuneTrie) Delete(key string) bool {
 // walker function with the key and value. If the walker function returns
 // an error, the walk is aborted.
 // The traversal is depth first with no guaranteed order.
-func (trie *RuneTrie) Walk(walker WalkFunc) error {
-	return trie.walk("", walker)
+func (trie *RuneTrie) Walk(prefix string, walker WalkFunc) error {
+	return trie.walk(prefix, walker)
 }
 
 // RuneTrie node and the rune key of the child the path descends into.

@@ -101,8 +101,8 @@ func (trie *PathTrie) Delete(key string) bool {
 // walker function with the key and value. If the walker function returns
 // an error, the walk is aborted.
 // The traversal is depth first with no guaranteed order.
-func (trie *PathTrie) Walk(walker WalkFunc) error {
-	return trie.walk("", walker)
+func (trie *PathTrie) Walk(prefix string, walker WalkFunc) error {
+	return trie.walk(prefix, walker)
 }
 
 // PathTrie node and the part string key of the child the path descends into.

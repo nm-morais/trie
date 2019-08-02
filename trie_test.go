@@ -206,7 +206,7 @@ func testTrieWalk(t *testing.T, trie Trier) {
 		walked[key]++
 		return nil
 	}
-	if err := trie.Walk(walker); err != nil {
+	if err := trie.Walk("", walker); err != nil {
 		t.Errorf("expected error nil, got %v", err)
 	}
 
@@ -240,7 +240,7 @@ func testTrieWalkError(t *testing.T, trie Trier) {
 		walked++
 		return nil
 	}
-	if err := trie.Walk(walker); err != walkerError {
+	if err := trie.Walk("", walker); err != walkerError {
 		t.Errorf("expected walker error, got %v", err)
 	}
 	if len(table) == walked {
