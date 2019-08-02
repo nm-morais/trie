@@ -1,3 +1,3 @@
-module github.com/dghubble/trie
+module github.com/perlin-network/trie
 
 go 1.12
