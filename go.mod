@@ -1,3 +1,3 @@
-module github.com/perlin-network/trie
+module github.com/nm-morais/trie
 
 go 1.12
